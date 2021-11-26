@@ -13,7 +13,16 @@ class Number{
         }
         return max;
     }
-    
+     int smallNumber(int a,int b,int c){
+         int min = a;
+         if (min>b) {
+             min = b;
+         }
+         if (min>c) {
+             min = c;
+         }
+         return min;
+     }
 }
 
 public class FindLargeNumber {
@@ -27,8 +36,8 @@ public class FindLargeNumber {
         int c = sc.nextInt();
         Number number = new Number();
         int largeNumber = number.largeNumber(a, b,c);
-        //int smallNumber = number.smallNumber(a, b, c);
-        //System.out.println("Small number : "+smallNumber);
-        System.out.println("Large number : "+largeNumber);
+        int smallNumber = number.smallNumber(a, b, c);
+        System.out.println("Smallest number : "+smallNumber);
+        System.out.println("Largest number : "+largeNumber);
     }
 }
